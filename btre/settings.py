@@ -83,9 +83,11 @@ WSGI_APPLICATION = "btre.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
+
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
+        "ENGINE": process.env.ENGINE,
         "NAME": "btredb",
         "USER": "postgres",
         "PASSWORD": "admin",
@@ -93,6 +95,10 @@ DATABASES = {
         "PORT": "5433",
     }
 }
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
