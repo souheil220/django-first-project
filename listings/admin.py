@@ -18,6 +18,7 @@ class ListingAdmin(admin.ModelAdmin):
         "price",
     )
     list_per_page = 25
+    prepopulated_fields = {'slug': ('title',)} 
 
 
 admin.site.register(Listing, ListingAdmin)

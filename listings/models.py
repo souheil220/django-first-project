@@ -1,7 +1,7 @@
 from django.db import models
 from datetime import datetime
 from realtors.models import Realtor
-
+from django.urls import reverse
 
 class Listing(models.Model):
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
@@ -26,6 +26,10 @@ class Listing(models.Model):
     photo_6 = models.ImageField(upload_to="photos/%Y/%m/%d/", blank=True)
     is_published = models.BooleanField(default=True)
     list_date = models.DateTimeField(default=datetime.now, blank=True)
+    slug = models.SlugField(null=False, unique=True) # new
 
     def __str__(self):
         return self.title
+    
+    # def get_absolute_url(self):
+    #     return reverse('listing', kwargs={'slug': self.slug}) # new
