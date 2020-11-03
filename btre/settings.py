@@ -27,7 +27,7 @@ SECRET_KEY = "-f8&%5a7ks_q2k-^sbq$dpkj(t6p8f@x&^kbtt*xt57yakim=#"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://btr-real-estate.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['.btr-real-estate.herokuapp.com/','127.0.0.1']
 
 
 # Application definition
@@ -87,13 +87,13 @@ WSGI_APPLICATION = "btre.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "d5q4jcjjd7c555",
-        "USER": "vzobkmkxiaiurx",
-        "PASSWORD": "7f16f31ab31d19522dc3e767c5285cf711beb43a244c83001a788c3945cce903",
-        "HOST": "ec2-3-218-75-21.compute-1.amazonaws.com",
-        "PORT": "5432",
-        'URI': 'postgres://vzobkmkxiaiurx:7f16f31ab31d19522dc3e767c5285cf711beb43a244c83001a788c3945cce903@ec2-3-218-75-21.compute-1.amazonaws.com:5432/d5q4jcjjd7c555'
+        # "ENGINE": "django.db.backends.postgresql",
+        # "NAME": "d5q4jcjjd7c555",
+        # "USER": "vzobkmkxiaiurx",
+        # "PASSWORD": "7f16f31ab31d19522dc3e767c5285cf711beb43a244c83001a788c3945cce903",
+        # "HOST": "ec2-3-218-75-21.compute-1.amazonaws.com",
+        # "PORT": "5432",
+        # 'URI': 'postgres://vzobkmkxiaiurx:7f16f31ab31d19522dc3e767c5285cf711beb43a244c83001a788c3945cce903@ec2-3-218-75-21.compute-1.amazonaws.com:5432/d5q4jcjjd7c555'
     }
 }
 
